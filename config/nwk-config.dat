@@ -1,0 +1,48 @@
+/******************************************************************************
+*//**
+  @file
+  @brief This file supports the SimpliciTI Customer Configuration for overall 
+         network.
+******************************************************************************/
+
+/* max hop count */
+-DMAX_HOPS=3
+
+/* max hops away from and AP. Keeps hop count and therefore replay
+ * storms down for sending to and from polling End Devices. Also used
+ * when joining since the EDs can't be more than 1 hop away.
+ */
+-DMAX_HOPS_FROM_AP=1
+
+/* Maximum size of Network application payload. Do not change unless
+ * protocol changes are reflected in different maximum network
+ * application payload size.
+ */
+-DMAX_NWK_PAYLOAD=9
+
+/* Maximum size of application payload */
+-DMAX_APP_PAYLOAD=10
+
+/* default Link token */
+-DDEFAULT_LINK_TOKEN=0x01020304
+
+/* default Join token */
+-DDEFAULT_JOIN_TOKEN=0x05060708
+
+/* Remove comment to enable Frequency Agility */
+/*-DFREQUENCY_AGILITY*/
+
+/* Remove comment to enable application autoacknowledge support. Requires extended API as well */
+/*-DAPP_AUTO_ACK*/
+
+/* Remove comment to enable Extended API */
+-DEXTENDED_API
+
+/* Remove comment to enable security. */
+/*-DSMPL_SECURE*/
+
+/* Remove comment to enable NV object support. */
+/*-DNVOBJECT_SUPPORT*/
+
+/* Insert comment to disable software timer. */
+-DSW_TIMER
